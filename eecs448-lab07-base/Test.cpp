@@ -74,10 +74,9 @@ void Test::test4(){
 void Test::test5(){
     LinkedListOfInts testList;
     testList.addBack(1);
-    std::vector<int> myVector = testList.toVector();        //Vector should just be 1
-    testList.addBack(2);                                    //List should be 2,1
-    std::vector<int> myVector1 = testList.toVector();       //Vector should be 2,1
-    if(myVector.back() != myVector1.back()){
+    testList.addBack(2);                                    //List should be 1,2
+    std::vector<int> myVector = testList.toVector();       //Vector should be 1,2
+    if(myVector.back() == 2){
         std::cout << "TEST 5: addBack adds the correct value to the back of the list: PASSED" << std::endl;
     }else{
         std::cout << "TEST 5: addBack adds the correct value to the back of the list: FAILED" << std::endl;
