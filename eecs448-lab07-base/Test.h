@@ -68,6 +68,10 @@ public:
         * Tests if removeBack removes the node in the back of the list
         **/
        void test9();
+        /**
+        * Tests if removeFront decrements the value of size.
+        **/
+        void test10();
 
 };
 #endif

@@ -20,6 +20,7 @@ void Test::test(){
     test7();
     test8();
     test9();
+    test10();
 
 }
 
@@ -106,9 +107,9 @@ void Test::test7(){
 
 void Test::test8(){
     LinkedListOfInts testList;
-    testList.addFront(3);                               //List should be 3,2,1,0
+    testList.addFront(3);                               //List should be 3
     testList.removeBack();
-    if(testList.size() == 0){             
+    if(testList.size() == 0){                           //list should be size 0
         std::cout << "TEST 8: size will return the correct value after removeback(): PASSED" << std::endl;
     } else{
         std::cout << "TEST 8: size will return the correct value after removeback(): FAILED" << std::endl;
@@ -128,5 +129,17 @@ void Test::test9(){
         std::cout << "TEST 9: removeBack removes one value from the back of the list: PASSED" << std::endl;
     } else{
         std::cout << "TEST 9: removeBack removes one value from the back of the list: FAILED" << std::endl;
+    }
+}
+
+
+void Test::test10(){
+    LinkedListOfInts testList;
+    testList.addFront(1);
+    testList.removeFront();
+    if(testList.size() == 0){
+        std::cout << "TEST 10: removeFront decrements the size by 1: PASSED" << std::endl;
+    }else{
+        std::cout << "TEST 10: removeFront decrements the size by 1: FAILED" << std::endl;
     }
 }
