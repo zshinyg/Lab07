@@ -22,12 +22,7 @@ public:
          **/
         void test();
 
- private: 
-
-        /**
-        * creates a generic list to run tests on
-        **/
-        LinkedListOfInts genericTestList();
+ private:
 
         /**
         * Tests that an emypt list is created.
@@ -56,13 +51,13 @@ public:
 
         /**
         * Tests if removeBack subtracts 1 from the size of the linked list.
-        **/        
+        **/
        void test6();
 
         /**
         * Tests if removeBack removes the node in the back of the list
-        **/  
-       void test7();        
+        **/
+       void test7();
 
 };
 #endif

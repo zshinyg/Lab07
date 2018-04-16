@@ -1,25 +1,23 @@
 #include "Test.h"
-#include "LinkedListOfInts.h"
+
 
 
 Test::Test() {
 
 }
 
-LinkedListOfInts genericTestList(){
-    LinkedListOfInts list;
-    list.addFront(3);
-    list.addFront(2);
-    list.addBack(1);
-    list.addBack(0);            //List should be 3,2,1,0
-    return list;
-}
 
 void Test::test(){
     std::cout << "LAB 07: LINKED LIST TESTING \nBY: COLTYN GATTON" << std::endl;
     std::cout << "==============================" << std::endl;
 
    test1();
+   test2();
+   test3();
+   test4();
+   test5();
+   test6();
+   test7();
 
 }
 
@@ -64,7 +62,10 @@ void Test::test4(){
 
 void Test::test5(){
     LinkedListOfInts testList;
-    testList = genericTestList();
+    testList.addFront(3);
+    testList.addFront(2);
+    testList.addBack(1);
+    testList.addBack(0);            //List should be 3,2,1,0
     bool isInList = testList.search(1);                 // Search for 1 in the list
     std::vector<int> myVector = testList.toVector();
     std::find(myVector.begin(), myVector.end(), 1);     //Search for 1 in the vector.
@@ -77,7 +78,10 @@ void Test::test5(){
 
 void Test::test6(){
     LinkedListOfInts testList;
-    testList = genericTestList();
+    testList.addFront(3);
+    testList.addFront(2);
+    testList.addBack(1);
+    testList.addBack(0);            //List should be 3,2,1,0
     testList.removeBack();
     std::vector<int> myVector = testList.toVector();    //creates a vector
     if(testList.size() == myVector.size()){             //Tests if the size of the vector is equal to the size of the list.
@@ -89,7 +93,10 @@ void Test::test6(){
 
 void Test::test7(){
     LinkedListOfInts testList;
-    testList = genericTestList();
+    testList.addFront(3);
+    testList.addFront(2);
+    testList.addBack(1);
+    testList.addBack(0);            //List should be 3,2,1,0
     std::vector<int> myVector = testList.toVector();    //creates a vector
     testList.removeBack();                              //list should be 3,2,1 now
     std::vector<int> myVector1 = testList.toVector();    //creates a vector

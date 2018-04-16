@@ -18,8 +18,8 @@ int main(int argc, char** argv)
 	//TestSuite myTester;
 	//myTester.runTests();
 
-	//Test myTest;
-	//myTest.test();
+	Test myTest;
+	myTest.test();
 
 	std::cout << "Running...\nAnd it's done.\nGoodbye.\n";
 
