@@ -21,6 +21,10 @@ void Test::test(){
     test8();
     test9();
     test10();  
+    test11();
+    test12();
+    test13();
+    test14();
 
     std::cout << "==============================" << std::endl;
 }
