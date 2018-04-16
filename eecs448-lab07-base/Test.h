@@ -112,5 +112,10 @@ public:
          * removeFront returns true when a value is removed
          * */
         void test18();
+
+        /**
+         * size returns the correct value after 1 removeFront()
+         * */
+        void test19();
 };
 #endif

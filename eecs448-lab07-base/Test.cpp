@@ -236,3 +236,14 @@ void Test::test18(){
         std::cout << "TEST 18: removeFront returns true when a value is removed from the front: FAILED" << std::endl;
     }
 }
+
+void Test::test19(){
+    LinkedListOfInts testList;
+    testList.addBack(1);
+    testList.removeFront();
+    if(testList.size() == 0){
+        std::cout << "TEST 19: size will return the correct value after 1 removeFront(): PASSED" << std::endl;
+    } else{
+        std::cout << "TEST 19: size will return the correct value after 1 removeFront(): FAILED" << std::endl;
+    }
+}
