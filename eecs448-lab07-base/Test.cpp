@@ -11,15 +11,15 @@ void Test::test(){
     std::cout << "LAB 07: LINKED LIST TESTING \nBY: COLTYN GATTON" << std::endl;
     std::cout << "==============================" << std::endl;
 
-   test1();
-   test2();
-   test3();
-   test4();
-   test5();
-   test6();
-   test7();
-   test8();
-   test9();
+    test1();
+    test2();
+    test3();
+    test4();
+    test5();
+    test6();
+    test7();
+    test8();
+    test9();
 
 }
 
@@ -106,13 +106,9 @@ void Test::test7(){
 
 void Test::test8(){
     LinkedListOfInts testList;
-    testList.addFront(3);
-    testList.addFront(2);
-    testList.addBack(1);
-    testList.addBack(0);                                //List should be 3,2,1,0
+    testList.addFront(3);                               //List should be 3,2,1,0
     testList.removeBack();
-    std::vector<int> myVector = testList.toVector();    //creates a vector
-    if(testList.size() == myVector.size()){             //Tests if the size of the vector is equal to the size of the list.
+    if(testList.size() == 0){             
         std::cout << "TEST 8: size will return the correct value after removeback(): PASSED" << std::endl;
     } else{
         std::cout << "TEST 8: size will return the correct value after removeback(): FAILED" << std::endl;
