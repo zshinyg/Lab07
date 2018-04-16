@@ -61,13 +61,12 @@ void Test::test3(){
 void Test::test4(){
     LinkedListOfInts testList;
     testList.addFront(1);
-    std::vector<int> myVector = testList.toVector();        //Vector should just be 1
     testList.addFront(2);                                   //List should be 2,1
-    std::vector<int> myVector1 = testList.toVector();       //Vector should be 2,1
-    if(myVector.begin() != myVector1.begin()){
-        std::cout << "TEST 4: addFront adds the value to the front of the list: PASSED" << std::endl;
+    std::vector<int> myVector = testList.toVector();       //Vector should be 2,1
+    if(myVector.front() == 2){
+        std::cout << "TEST 4: addFront adds the correct value to the front of the list: PASSED" << std::endl;
     }else{
-        std::cout << "TEST 4: addFront adds the value to the front of the list: FAILED" << std::endl;
+        std::cout << "TEST 4: addFront adds the correct value to the front of the list: FAILED" << std::endl;
     }
 }
 
@@ -102,15 +101,15 @@ void Test::test7(){
     bool isInList = testList.search(1);                 // Search for 1 in the list
     std::vector<int> myVector = testList.toVector();
     if(isInList && (std::find(myVector.begin(), myVector.end(), 1) != myVector.end())){         //Tests if the value exists in the vector and list.
-        std::cout << "TEST 7: search returns the correct boolean when the value exists: PASSED" << std::endl;
+        std::cout << "TEST 7: search returns true when the value exists: PASSED" << std::endl;
     } else{
-        std::cout << "TEST 7: search returns the correct boolean when the value exists: FAILED" << std::endl;
+        std::cout << "TEST 7: search returns true when the value exists: FAILED" << std::endl;
     }
 }
 
 void Test::test8(){
     LinkedListOfInts testList;
-    testList.addFront(3);                               //List should be 3
+    testList.addFront(3);                               //List should be [3]
     testList.removeBack();
     if(testList.size() == 0){                           //list should be size 0
         std::cout << "TEST 8: size will return the correct value after 1 removeback(): PASSED" << std::endl;
@@ -124,11 +123,10 @@ void Test::test9(){
     testList.addFront(3);
     testList.addFront(2);
     testList.addBack(1);
-    testList.addBack(0);                                //List should be 3,2,1,0
-    std::vector<int> myVector = testList.toVector();    //creates a vector
+    testList.addBack(0);                                //List should be [3,2,1,0]
     testList.removeBack();                              //list should be 3,2,1 now
-    std::vector<int> myVector1 = testList.toVector();   //creates a vector
-    if(myVector.back() != myVector1.back()){
+    std::vector<int> myVector = testList.toVector();   //creates a vector
+    if(myVector.back() == 1){
         std::cout << "TEST 9: removeBack removes one value from the back of the list: PASSED" << std::endl;
     } else{
         std::cout << "TEST 9: removeBack removes one value from the back of the list: FAILED" << std::endl;
@@ -172,9 +170,9 @@ void Test::test13(){
     testList.addFront(3);               //size = 3
     testList.addFront(4);               //size = 4
     if(testList.size() == 4 ){
-        std::cout << "TEST 13: size return correct value after performing multiple addFronts: PASSED" << std::endl;
+        std::cout << "TEST 13: size returns correct value after performing multiple addFronts: PASSED" << std::endl;
     } else{
-        std::cout << "TEST 13: size return correct value after performing multiple addFronts: FAILED" << std::endl;
+        std::cout << "TEST 13: size returns correct value after performing multiple addFronts: FAILED" << std::endl;
     }
 }
 
@@ -185,8 +183,8 @@ void Test::test14(){
     testList.addBack(3);               //size = 3
     testList.addBack(4);               //size = 4
     if(testList.size() == 4 ){
-        std::cout << "TEST 14: size return correct value after performing multiple addBacks: PASSED" << std::endl;
+        std::cout << "TEST 14: size returns correct value after performing multiple addBacks: PASSED" << std::endl;
     } else{
-        std::cout << "TEST 14: size return correct value after performing multiple addBacks: FAILED" << std::endl;
+        std::cout << "TEST 14: size returns correct value after performing multiple addBacks: FAILED" << std::endl;
     }
 }
