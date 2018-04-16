@@ -40,24 +40,34 @@ public:
         void test3();
 
         /**
-        * Tests that addBack adds one value to the list.
+        * Tests that addFront adds one value to the front of the list.
         **/
         void test4();
 
         /**
-        * Tests the search method.
+        * Tests that addBack adds one value to the back of the list.
         **/
         void test5();
 
         /**
+        * Tests that addBack adds one value to the list.
+        **/
+        void test6();
+
+        /**
+        * Tests the search method.
+        **/
+        void test7();
+
+        /**
         * Tests if removeBack subtracts 1 from the size of the linked list.
         **/
-       void test6();
+       void test8();
 
         /**
         * Tests if removeBack removes the node in the back of the list
         **/
-       void test7();
+       void test9();
 
 };
 #endif
