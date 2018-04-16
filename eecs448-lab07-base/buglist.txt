@@ -4,4 +4,6 @@ BUGS
 
 addBack() adds a value to the list but it is not the correct value given.
 removeBack() never actually removes anything from the list
-removeFront() removes something from the list but never decrements the size.
+removeFront() never actually removes anything from the list
+isEmpty() does not change to false when the list is not empty.
+
