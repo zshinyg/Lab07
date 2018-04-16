@@ -16,7 +16,6 @@ public:
          **/
         Test();
 
-
         /**
          * runs the tests.
          **/
@@ -30,7 +29,7 @@ public:
         void test1();
 
         /**
-        * Tests the isEmpty() method
+        * Tests if is empty returns true when the list is empty
         **/
         void test2();
 
@@ -62,16 +61,37 @@ public:
         /**
         * Tests if removeBack subtracts 1 from the size of the linked list.
         **/
-       void test8();
+        void test8();
 
         /**
         * Tests if removeBack removes the node in the back of the list
         **/
-       void test9();
+        void test9();
+
         /**
         * Tests if removeFront decrements the value of size.
         **/
         void test10();
+
+        /**
+        * Search returns false if the value does not exist.
+        **/
+        void test11();
+
+        /**
+        * Search returns false if the value does not exist.
+        **/
+        void test12();      
+
+        /**
+        * Test the size method after using addFront multiple times.
+        **/
+        void test13();
+
+        /**
+        * Test the size method after using addBack multiple times.
+        **/
+        void test14();
 
 };
 #endif

@@ -20,8 +20,9 @@ void Test::test(){
     test7();
     test8();
     test9();
-    test10();
+    test10();  
 
+    std::cout << "==============================" << std::endl;
 }
 
 void Test::test1(){
@@ -36,9 +37,9 @@ void Test::test1(){
 void Test::test2(){
     LinkedListOfInts testList;
     if(testList.isEmpty() == true){
-        std::cout << "TEST 2: isEmpty returns correct boolean if the list is empty: PASSED" << std::endl;
+        std::cout << "TEST 2: isEmpty returns true if the list is empty: PASSED" << std::endl;
     } else{
-        std::cout << "TEST 2: isEmpty returns correct boolean if the list is empty: FAILED" << std::endl;
+        std::cout << "TEST 2: isEmpty returns true if the list is empty: FAILED" << std::endl;
 
     }
 }
@@ -72,10 +73,10 @@ void Test::test5(){
     std::vector<int> myVector = testList.toVector();        //Vector should just be 1
     testList.addBack(2);                                    //List should be 2,1
     std::vector<int> myVector1 = testList.toVector();       //Vector should be 2,1
-    if(myVector.end() != myVector1.end()){
-        std::cout << "TEST 5: addBack adds the value to the back of the list: PASSED" << std::endl;
+    if(myVector.back() != myVector1.back()){
+        std::cout << "TEST 5: addBack adds the correct value to the back of the list: PASSED" << std::endl;
     }else{
-        std::cout << "TEST 5: addBack adds the value to the back of the list: FAILED" << std::endl;
+        std::cout << "TEST 5: addBack adds the correct value to the back of the list: FAILED" << std::endl;
     }
 }
 
@@ -97,7 +98,6 @@ void Test::test7(){
     testList.addBack(0);                                //List should be 3,2,1,0
     bool isInList = testList.search(1);                 // Search for 1 in the list
     std::vector<int> myVector = testList.toVector();
-    std::find(myVector.begin(), myVector.end(), 1);     //Search for 1 in the vector.
     if(isInList && (std::find(myVector.begin(), myVector.end(), 1) != myVector.end())){         //Tests if the value exists in the vector and list.
         std::cout << "TEST 7: search returns the correct boolean when the value exists: PASSED" << std::endl;
     } else{
@@ -110,9 +110,9 @@ void Test::test8(){
     testList.addFront(3);                               //List should be 3
     testList.removeBack();
     if(testList.size() == 0){                           //list should be size 0
-        std::cout << "TEST 8: size will return the correct value after removeback(): PASSED" << std::endl;
+        std::cout << "TEST 8: size will return the correct value after 1 removeback(): PASSED" << std::endl;
     } else{
-        std::cout << "TEST 8: size will return the correct value after removeback(): FAILED" << std::endl;
+        std::cout << "TEST 8: size will return the correct value after 1 removeback(): FAILED" << std::endl;
     }
 }
 
@@ -125,21 +125,65 @@ void Test::test9(){
     std::vector<int> myVector = testList.toVector();    //creates a vector
     testList.removeBack();                              //list should be 3,2,1 now
     std::vector<int> myVector1 = testList.toVector();   //creates a vector
-    if(myVector.end() != myVector1.end()){
+    if(myVector.back() != myVector1.back()){
         std::cout << "TEST 9: removeBack removes one value from the back of the list: PASSED" << std::endl;
     } else{
         std::cout << "TEST 9: removeBack removes one value from the back of the list: FAILED" << std::endl;
     }
 }
 
-
 void Test::test10(){
     LinkedListOfInts testList;
     testList.addFront(1);
     testList.removeFront();
     if(testList.size() == 0){
-        std::cout << "TEST 10: removeFront decrements the size by 1: PASSED" << std::endl;
+        std::cout << "TEST 10: removeFront decrements the size by 1 after1 use: PASSED" << std::endl;
     }else{
-        std::cout << "TEST 10: removeFront decrements the size by 1: FAILED" << std::endl;
+        std::cout << "TEST 10: removeFront decrements the size by 1 after 1 use: FAILED" << std::endl;
+    }
+}
+
+void Test::test11(){
+    LinkedListOfInts testList;
+    if(testList.search(1) == false){
+        std::cout << "TEST 11: search returns false when the value does not exist: PASSED" << std::endl;
+    } else{
+        std::cout << "TEST 11: search returns false when the value does not exist: FAILED" << std::endl;
+    }
+}
+
+void Test::test12(){
+    LinkedListOfInts testList;
+    testList.addFront(1);
+    if(testList.isEmpty() == false){
+        std::cout << "TEST 12: isEmpty returns false when the list is not empty: PASSED" << std::endl;
+    } else{
+        std::cout << "TEST 12: isEmpty returns false when the list is not empty: FAILED" << std::endl;
+    }
+}
+
+void Test::test13(){
+    LinkedListOfInts testList;
+    testList.addFront(1);               //size = 1
+    testList.addFront(2);               //size = 2
+    testList.addFront(3);               //size = 3
+    testList.addFront(4);               //size = 4
+    if(testList.size() == 4 ){
+        std::cout << "TEST 13: size return correct value after performing multiple addFronts: PASSED" << std::endl;
+    } else{
+        std::cout << "TEST 13: size return correct value after performing multiple addFronts: FAILED" << std::endl;
+    }
+}
+
+void Test::test14(){
+    LinkedListOfInts testList;
+    testList.addBack(1);               //size = 1
+    testList.addBack(2);               //size = 2
+    testList.addBack(3);               //size = 3
+    testList.addBack(4);               //size = 4
+    if(testList.size() == 4 ){
+        std::cout << "TEST 14: size return correct value after performing multiple addBacks: PASSED" << std::endl;
+    } else{
+        std::cout << "TEST 14: size return correct value after performing multiple addBacks: FAILED" << std::endl;
     }
 }
