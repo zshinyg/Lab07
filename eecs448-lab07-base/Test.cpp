@@ -240,11 +240,15 @@ void Test::test18(){
 
 void Test::test19(){
     LinkedListOfInts testList;
-    testList.addBack(1);
+    testList.addFront(1);
+    testList.addFront(2);
+    testList.addFront(3);
     testList.removeFront();
-    if(testList.size() == 0){
-        std::cout << "TEST 19: size will return the correct value after 1 removeFront(): PASSED" << std::endl;
+    std::vector<int> myVector = testList.toVector();   //creates a vector
+
+    if(myVector.front() == 2){
+        std::cout << "TEST 19: removeFront removes the front value in the list: PASSED" << std::endl;
     } else{
-        std::cout << "TEST 19: size will return the correct value after 1 removeFront(): FAILED" << std::endl;
+        std::cout << "TEST 19: removeFront removes the front value in the list: FAILED" << std::endl;
     }
 }

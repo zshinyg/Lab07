@@ -1,0 +1,7 @@
+===========================
+BUGS
+===========================
+
+addBack() adds a value to the list but it is not the correct value given.
+removeBack() never actually removes anything from the list
+removeFront() removes something from the list but never decrements the size.

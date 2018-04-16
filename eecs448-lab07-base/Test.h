@@ -114,7 +114,7 @@ public:
         void test18();
 
         /**
-         * size returns the correct value after 1 removeFront()
+         * removeFront() removes the front value
          * */
         void test19();
 };
