@@ -29,6 +29,7 @@ void Test::test(){
     test16();
     test17();
     test18();
+    test19();
 
     std::cout << "==============================" << std::endl;
 }
