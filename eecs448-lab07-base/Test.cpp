@@ -90,9 +90,10 @@ void Test::test6(){
 void Test::test7(){
     LinkedListOfInts testList;
     testList = genericTestList();
-    testList.removeBack();                              //list should be 3,2,1 now
     std::vector<int> myVector = testList.toVector();    //creates a vector
-    if(myVector.end() != 0){
+    testList.removeBack();                              //list should be 3,2,1 now
+    std::vector<int> myVector1 = testList.toVector();    //creates a vector
+    if(myVector.end() != myVector1.end()){
         std::cout << "TEST 7: removeBack removes one value from the back of the list: PASSED" << std::endl;
     } else{
         std::cout << "TEST 7: removeBack removes one value from the back of the list: FAILED" << std::endl;
