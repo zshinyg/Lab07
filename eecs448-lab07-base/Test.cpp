@@ -188,3 +188,47 @@ void Test::test14(){
         std::cout << "TEST 14: size returns correct value after performing multiple addBacks: FAILED" << std::endl;
     }
 }
+
+void Test::test15(){
+    LinkedListOfInts testList;
+    bool testRemove = testList.removeBack();
+    if(testRemove == false){
+        std::cout << "TEST 15: removeBack returns false when nothing is removed: PASSED" << std::endl;
+    } else{
+        std::cout << "TEST 15: removeBack returns false when nothing is removed: FAILED" << std::endl;
+    }
+}
+
+void Test::test16(){
+    LinkedListOfInts testList;
+    testList.addBack(1);
+    testList.addFront(2);
+    bool testRemove = testList.removeBack();
+    if(testRemove == true){
+        std::cout << "TEST 16: removeBack returns true when a value is removed: PASSED" << std::endl;
+    } else{
+        std::cout << "TEST 16: removeBack returns true when a value is removed: FAILED" << std::endl;
+    }
+}
+
+void Test::test17(){
+    LinkedListOfInts testList;
+    bool testRemove = testList.removeFront();
+    if(testRemove == false){
+        std::cout << "TEST 17: removeFront returns false when nothing is removed: PASSED" << std::endl;
+    } else{
+        std::cout << "TEST 17: removeFront returns false when nothing is removed: FAILED" << std::endl;
+    }
+}
+
+void Test::test18(){
+    LinkedListOfInts testList;
+    testList.addBack(1);
+    testList.addFront(2);
+    bool testRemove = testList.removeFront();
+    if(testRemove == true){
+        std::cout << "TEST 16: removeFront returns true when a value is removed: PASSED" << std::endl;
+    } else{
+        std::cout << "TEST 16: removeFront returns true when a value is removed: FAILED" << std::endl;
+    }
+}

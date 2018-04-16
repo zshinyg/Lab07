@@ -93,5 +93,24 @@ public:
         **/
         void test14();
 
+        /**
+        * removeBack returns false when nothing is removed
+        **/
+        void test15();
+
+        /**
+         * removeBack returns true when a value is removed
+         * */
+        void test16();
+
+        /**
+        * removeFront returns false when nothing is removed
+        **/
+        void test17();
+
+        /**
+         * removeFront returns true when a value is removed
+         * */
+        void test18();
 };
 #endif
